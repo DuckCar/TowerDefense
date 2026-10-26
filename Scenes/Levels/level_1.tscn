@@ -1,0 +1,84 @@
+[gd_scene load_steps=5 format=3 uid="uid://cj4lo5kyfu2gc"]
+
+[ext_resource type="Texture2D" uid="uid://cttel2yb4h7jc" path="res://Assets/Sprites/Map/map_level1 (1).png" id="1_d7fwg"]
+[ext_resource type="PackedScene" uid="uid://d3m2odaqj6mcn" path="res://Scenes/Entities/goblin_nho.tscn" id="2_gp4xl"]
+
+[sub_resource type="Curve2D" id="Curve2D_f22da"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 45, 191, 0, 0, 0, 0, 780, 178, 0, 0, 0, 0, 1486, 193, 0, 0, 0, 0, 1597, 255, 0, 0, 0, 0, 1595, 472, 0, 0, 0, 0, 1478, 538, 0, 0, 0, 0, 736, 536, 0, 0, 0, 0, 383, 548, 0, 0, 0, 0, 323, 633, 0, 0, 0, 0, 321, 825, 0, 0, 0, 0, 410, 884, 0, 0, 0, 0, 1193, 884, 0, 0, 0, 0, 1567, 887, 0, 0, 0, 0, 1733, 882, 0, 0, 0, 0, 1882, 889)
+}
+point_count = 15
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iooug"]
+size = Vector2(141.5, 47.5)
+
+[node name="level_1" type="Node2D"]
+
+[node name="BanDo_nen" type="Sprite2D" parent="."]
+texture = ExtResource("1_d7fwg")
+centered = false
+
+[node name="Duong_di_quai" type="Path2D" parent="."]
+curve = SubResource("Curve2D_f22da")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Duong_di_quai"]
+position = Vector2(45, 191)
+rotation = -0.0176852
+
+[node name="Goblin_nho" parent="Duong_di_quai" instance=ExtResource("2_gp4xl")]
+position = Vector2(45, 191)
+rotation = -0.0176852
+
+[node name="Slot_Xay_Thap" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot_Xay_Thap"]
+position = Vector2(474, 328)
+shape = SubResource("RectangleShape2D_iooug")
+
+[node name="Slot_Xay_Thap9" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot_Xay_Thap9"]
+position = Vector2(982, 1042)
+shape = SubResource("RectangleShape2D_iooug")
+
+[node name="Slot_Xay_Thap8" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot_Xay_Thap8"]
+position = Vector2(904, 817)
+shape = SubResource("RectangleShape2D_iooug")
+
+[node name="Slot_Xay_Thap7" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot_Xay_Thap7"]
+position = Vector2(1490, 811)
+shape = SubResource("RectangleShape2D_iooug")
+
+[node name="Slot_Xay_Thap6" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot_Xay_Thap6"]
+position = Vector2(1246, 689)
+shape = SubResource("RectangleShape2D_iooug")
+
+[node name="Slot_Xay_Thap5" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot_Xay_Thap5"]
+position = Vector2(693, 679)
+shape = SubResource("RectangleShape2D_iooug")
+
+[node name="Slot_Xay_Thap4" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot_Xay_Thap4"]
+position = Vector2(767, 456)
+shape = SubResource("RectangleShape2D_iooug")
+
+[node name="Slot_Xay_Thap3" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot_Xay_Thap3"]
+position = Vector2(1122, 466)
+shape = SubResource("RectangleShape2D_iooug")
+
+[node name="Slot_Xay_Thap2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot_Xay_Thap2"]
+position = Vector2(1232, 338)
+shape = SubResource("RectangleShape2D_iooug")

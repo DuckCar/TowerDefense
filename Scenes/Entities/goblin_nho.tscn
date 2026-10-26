@@ -1,0 +1,44 @@
+[gd_scene load_steps=9 format=3 uid="uid://d3m2odaqj6mcn"]
+
+[ext_resource type="Texture2D" uid="uid://cfgrlkr81lb6w" path="res://Assets/Sprites/Units/goblin_nho/than_goblin_nho.png" id="1_4cg2p"]
+[ext_resource type="Script" path="res://Scenes/Entities/goblin_nho.gd" id="1_rc4v8"]
+[ext_resource type="Texture2D" uid="uid://cpb2f0i05emjf" path="res://Assets/Sprites/Units/goblin_nho/tay_phai_goblin_nho.png" id="2_gt2y2"]
+[ext_resource type="Texture2D" uid="uid://06p80nt3latb" path="res://Assets/Sprites/Units/goblin_nho/chan_trai_goblin_nho.png" id="3_sxu2k"]
+[ext_resource type="Texture2D" uid="uid://ddvpfgkevytks" path="res://Assets/Sprites/Units/goblin_nho/tay_trai_goblin_nho.png" id="5_aoih1"]
+[ext_resource type="Texture2D" uid="uid://ddjtv2juffkq0" path="res://Assets/Sprites/Units/goblin_nho/vu_khi_goblin_nho.png" id="6_3ondf"]
+[ext_resource type="Texture2D" uid="uid://cddlpobihcnyx" path="res://Assets/Sprites/Units/goblin_nho/chan_phai_goblin_nho.png" id="7_3slrj"]
+[ext_resource type="Texture2D" uid="uid://dtpdf1aodugp4" path="res://Assets/Sprites/Units/goblin_nho/dau_goblin_nho.png" id="8_lkvgn"]
+
+[node name="Goblin_nho" type="PathFollow2D"]
+script = ExtResource("1_rc4v8")
+
+[node name="Co_the" type="Node2D" parent="."]
+
+[node name="Tay_phai" type="Sprite2D" parent="Co_the"]
+position = Vector2(49, 75)
+texture = ExtResource("2_gt2y2")
+
+[node name="Chan_trai" type="Sprite2D" parent="Co_the"]
+position = Vector2(-5, 110)
+texture = ExtResource("3_sxu2k")
+
+[node name="Than" type="Sprite2D" parent="Co_the"]
+position = Vector2(6, 68)
+texture = ExtResource("1_4cg2p")
+
+[node name="Tay_trai" type="Sprite2D" parent="Co_the"]
+position = Vector2(-23, 71)
+texture = ExtResource("5_aoih1")
+
+[node name="Vu_khi" type="Sprite2D" parent="Co_the/Tay_trai"]
+position = Vector2(42, 7)
+scale = Vector2(0.897619, 0.708333)
+texture = ExtResource("6_3ondf")
+
+[node name="Chan_phai" type="Sprite2D" parent="Co_the"]
+position = Vector2(31, 109)
+texture = ExtResource("7_3slrj")
+
+[node name="Dau" type="Sprite2D" parent="Co_the"]
+position = Vector2(4, 21)
+texture = ExtResource("8_lkvgn")
