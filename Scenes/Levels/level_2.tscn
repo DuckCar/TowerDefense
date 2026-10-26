@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://blriwrhs00j22"]
+
+[ext_resource type="Texture2D" uid="uid://bf8x6u2w6oycb" path="res://Assets/Sprites/Map/map_level2_desert.png" id="1_ucdhh"]
+[ext_resource type="PackedScene" uid="uid://4codawi216a5" path="res://Scenes/Entities/ke_cuop.tscn" id="2_oylv5"]
+
+[sub_resource type="Curve2D" id="Curve2D_w2ac1"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 258, 22, 0, 0, 0, 0, 258, 139, 0, 0, 0, 0, 282, 216, 0, 0, 0, 0, 354, 252, 0, 0, 0, 0, 1333, 250, 0, 0, 0, 0, 1418, 252, 0, 0, 0, 0, 1497, 324, 0, 0, 0, 0, 1501, 409, 0, 0, 0, 0, 1501, 509, 0, 0, 0, 0, 1475, 575, 0, 0, 0, 0, 1405, 605, 0, 0, 0, 0, 1156, 609, 0, 0, 0, 0, 873, 616, 0, 0, 0, 0, 796, 643, 0, 0, 0, 0, 764, 699, 0, 0, 0, 0, 758, 792, 0, 0, 0, 0, 777, 860, 0, 0, 0, 0, 856, 903, 0, 0, 0, 0, 1939, 890)
+}
+point_count = 19
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ikh62"]
+size = Vector2(120.5, 43.5)
+
+[node name="level_2" type="Node2D" unique_id=584828426]
+
+[node name="BanDo_nen" type="Sprite2D" parent="." unique_id=1788273060]
+position = Vector2(2, 4)
+texture = ExtResource("1_ucdhh")
+centered = false
+
+[node name="Duong_Di_Quai" type="Path2D" parent="." unique_id=510281267]
+curve = SubResource("Curve2D_w2ac1")
+
+[node name="ke_cuop" parent="Duong_Di_Quai" unique_id=1481286277 instance=ExtResource("2_oylv5")]
+position = Vector2(258, 22)
+rotation = 1.5707964
+
+[node name="Slot_Xay_Thap" type="Area2D" parent="." unique_id=712102538]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot_Xay_Thap" unique_id=973553096]
+position = Vector2(476, 365)
+shape = SubResource("RectangleShape2D_ikh62")
+
+[node name="Slot_Xay_Thap3" type="Area2D" parent="." unique_id=1247567182]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot_Xay_Thap3" unique_id=1546524011]
+position = Vector2(1504, 1031)
+shape = SubResource("RectangleShape2D_ikh62")
+
+[node name="Slot_Xay_Thap4" type="Area2D" parent="." unique_id=187472257]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot_Xay_Thap4" unique_id=170321150]
+position = Vector2(1400, 778)
+shape = SubResource("RectangleShape2D_ikh62")
+
+[node name="Slot_Xay_Thap2" type="Area2D" parent="." unique_id=1188238286]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot_Xay_Thap2" unique_id=446438325]
+position = Vector2(1006, 780)
+shape = SubResource("RectangleShape2D_ikh62")
+
+[node name="Slot_Xay_Thap5" type="Area2D" parent="." unique_id=200301190]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot_Xay_Thap5" unique_id=456354117]
+position = Vector2(642, 761)
+shape = SubResource("RectangleShape2D_ikh62")
+
+[node name="Slot_Xay_Thap6" type="Area2D" parent="." unique_id=1033655784]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot_Xay_Thap6" unique_id=622744308]
+position = Vector2(899, 542)
+shape = SubResource("RectangleShape2D_ikh62")
+
+[node name="Slot_Xay_Thap7" type="Area2D" parent="." unique_id=12746368]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot_Xay_Thap7" unique_id=940764528]
+position = Vector2(1623, 457)
+shape = SubResource("RectangleShape2D_ikh62")
+
+[node name="Slot_Xay_Thap8" type="Area2D" parent="." unique_id=2032952870]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot_Xay_Thap8" unique_id=1285013954]
+position = Vector2(1097, 369)
+shape = SubResource("RectangleShape2D_ikh62")
+
+[node name="Slot_Xay_Thap9" type="Area2D" parent="." unique_id=513385711]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot_Xay_Thap9" unique_id=542121645]
+position = Vector2(1298, 186)
+shape = SubResource("RectangleShape2D_ikh62")
+
+[node name="Slot_Xay_Thap10" type="Area2D" parent="." unique_id=1699465153]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slot_Xay_Thap10" unique_id=724525190]
+position = Vector2(693, 180)
+shape = SubResource("RectangleShape2D_ikh62")

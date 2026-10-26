@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://4codawi216a5"]
+
+[ext_resource type="Script" uid="uid://b47cenj7wajf7" path="res://Scenes/Entities/ke_cuop.gd" id="1_f1lpt"]
+[ext_resource type="Texture2D" uid="uid://dk0ku1wxyxr1v" path="res://Assets/Sprites/Units/ke_cuop/tay_phai_trom.png" id="2_2pp0o"]
+[ext_resource type="Texture2D" uid="uid://ce4q80i0s41tc" path="res://Assets/Sprites/Units/ke_cuop/than_trom.png" id="2_5jvy3"]
+[ext_resource type="Texture2D" uid="uid://bogpmvbggpo71" path="res://Assets/Sprites/Units/ke_cuop/chan_trai_trom.png" id="3_hls4q"]
+[ext_resource type="Texture2D" uid="uid://d331rjot75h7d" path="res://Assets/Sprites/Units/ke_cuop/dau_trom.png" id="5_d7xav"]
+[ext_resource type="Texture2D" uid="uid://skquxfrxkmhu" path="res://Assets/Sprites/Units/ke_cuop/chan_phai_trom.png" id="6_ug5l7"]
+[ext_resource type="Texture2D" uid="uid://ca7c0rcbcthq0" path="res://Assets/Sprites/Units/ke_cuop/tay_trai_trom.png" id="7_yxada"]
+[ext_resource type="Texture2D" uid="uid://b2bnabejemruy" path="res://Assets/Sprites/Units/ke_cuop/vu_khi_trom.png" id="8_bjo57"]
+
+[node name="ke_cuop" type="PathFollow2D" unique_id=1481286277]
+script = ExtResource("1_f1lpt")
+
+[node name="Co_The" type="Node2D" parent="." unique_id=513365453]
+
+[node name="Tay_Phai" type="Sprite2D" parent="Co_The" unique_id=761649721]
+position = Vector2(-36, 37)
+texture = ExtResource("2_2pp0o")
+
+[node name="Chan_Trai" type="Sprite2D" parent="Co_The" unique_id=1757842286]
+position = Vector2(-84, 80)
+texture = ExtResource("3_hls4q")
+
+[node name="Than" type="Sprite2D" parent="Co_The" unique_id=19699179]
+position = Vector2(-69, 29)
+texture = ExtResource("2_5jvy3")
+
+[node name="Dau" type="Sprite2D" parent="Co_The" unique_id=848099543]
+position = Vector2(-59, -24)
+texture = ExtResource("5_d7xav")
+
+[node name="Chan_Phai" type="Sprite2D" parent="Co_The" unique_id=39833378]
+position = Vector2(-43, 82)
+texture = ExtResource("6_ug5l7")
+
+[node name="Tay_Trai" type="Sprite2D" parent="Co_The" unique_id=1202414232]
+position = Vector2(-109, 35)
+texture = ExtResource("7_yxada")
+
+[node name="Vu_Khi" type="Sprite2D" parent="Co_The/Tay_Trai" unique_id=1805216016]
+position = Vector2(63, 11)
+texture = ExtResource("8_bjo57")
