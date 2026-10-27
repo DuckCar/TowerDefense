@@ -15,13 +15,8 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="VeThanhLuocTruyen"
-<<<<<<< Updated upstream
-run/main_scene="uid://blriwrhs00j22"
-config/features=PackedStringArray("4.7", "GL Compatibility")
-=======
 run/main_scene="res://Scenes/Levels/level_1.tscn"
-config/features=PackedStringArray("4.0", "GL Compatibility")
->>>>>>> Stashed changes
+config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
