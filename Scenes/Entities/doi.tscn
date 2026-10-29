@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cut0mjbtlj226"]
+
+[ext_resource type="Texture2D" uid="uid://drpvhno2a52l4" path="res://Assets/Sprites/Units/doi/tay_phai_doi.png" id="1_kuw25"]
+[ext_resource type="Texture2D" uid="uid://crppa4op7db5h" path="res://Assets/Sprites/Units/doi/than_doi.png" id="2_vhfdo"]
+[ext_resource type="Texture2D" uid="uid://dx3xqwip6po0m" path="res://Assets/Sprites/Units/doi/tay_trai_doi.png" id="3_qywqb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ikh62"]
+radius = 52.0
+height = 108.0
+
+[node name="doi" type="PathFollow2D" unique_id=1352161785]
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1444153626]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1777414337]
+position = Vector2(-1, -1)
+shape = SubResource("CapsuleShape2D_ikh62")
+
+[node name="Co_the" type="Node2D" parent="Hitbox" unique_id=933301686]
+
+[node name="Tay_phai" type="Sprite2D" parent="Hitbox/Co_the" unique_id=163502928]
+position = Vector2(66, -52)
+texture = ExtResource("1_kuw25")
+
+[node name="Than" type="Sprite2D" parent="Hitbox/Co_the" unique_id=1269305736]
+texture = ExtResource("2_vhfdo")
+
+[node name="Tay_trai" type="Sprite2D" parent="Hitbox/Co_the" unique_id=1593763015]
+position = Vector2(-79, -29)
+texture = ExtResource("3_qywqb")

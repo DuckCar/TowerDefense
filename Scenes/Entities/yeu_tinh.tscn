@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://uwe065743o84"]
+
+[ext_resource type="Texture2D" uid="uid://bdctqvsg8ohgc" path="res://Assets/Sprites/Units/yeu_tinh/chan_phai_yeu_tinh.png" id="1_vn2l1"]
+[ext_resource type="Texture2D" uid="uid://blhybxo8wv0cf" path="res://Assets/Sprites/Units/yeu_tinh/chan_trai_yeu_tinh.png" id="2_p2grf"]
+[ext_resource type="Texture2D" uid="uid://yjyvm0otgsd3" path="res://Assets/Sprites/Units/yeu_tinh/tay_phai_yeu_tinh.png" id="3_ig3cd"]
+[ext_resource type="Texture2D" uid="uid://c1qga8pkl2i8g" path="res://Assets/Sprites/Units/yeu_tinh/than_yeu_tinh.png" id="4_q0ipa"]
+[ext_resource type="Texture2D" uid="uid://d1ijwj7u2bv8f" path="res://Assets/Sprites/Units/yeu_tinh/tay_trai_yeu_tinh.png" id="5_rlips"]
+[ext_resource type="Texture2D" uid="uid://lfwfhke0yxxq" path="res://Assets/Sprites/Units/yeu_tinh/vu_khi_yeu_tinh.png" id="6_pgccd"]
+[ext_resource type="Texture2D" uid="uid://c4fgesfvt603k" path="res://Assets/Sprites/Units/yeu_tinh/dau_yeu_tinh.png" id="7_8w6fi"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n4jmy"]
+radius = 48.0
+height = 164.0
+
+[node name="yeu_tinh" type="PathFollow2D" unique_id=1804171484]
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=974969615]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1828307699]
+position = Vector2(2, -16)
+shape = SubResource("CapsuleShape2D_n4jmy")
+
+[node name="Co_the" type="Node2D" parent="Hitbox" unique_id=190413944]
+
+[node name="Chan_phai" type="Sprite2D" parent="Hitbox/Co_the" unique_id=1489876515]
+position = Vector2(19, 49)
+texture = ExtResource("1_vn2l1")
+
+[node name="Chan_trai" type="Sprite2D" parent="Hitbox/Co_the" unique_id=1783385101]
+position = Vector2(-18, 49)
+texture = ExtResource("2_p2grf")
+
+[node name="Tay_phai" type="Sprite2D" parent="Hitbox/Co_the" unique_id=78154273]
+position = Vector2(31, -4)
+texture = ExtResource("3_ig3cd")
+
+[node name="Than" type="Sprite2D" parent="Hitbox/Co_the" unique_id=368385312]
+texture = ExtResource("4_q0ipa")
+
+[node name="Tay_trai" type="Sprite2D" parent="Hitbox/Co_the/Than" unique_id=20263314]
+position = Vector2(-30, -3)
+texture = ExtResource("5_rlips")
+
+[node name="Vu_khi" type="Sprite2D" parent="Hitbox/Co_the/Than/Tay_trai" unique_id=1326052165]
+show_behind_parent = true
+position = Vector2(55, 6)
+texture = ExtResource("6_pgccd")
+
+[node name="Dau" type="Sprite2D" parent="Hitbox/Co_the" unique_id=793267922]
+position = Vector2(-6, -76)
+texture = ExtResource("7_8w6fi")

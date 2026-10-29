@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://degu4ffbtgft3"]
+
+[ext_resource type="Texture2D" uid="uid://bfokm34lrpoxm" path="res://Assets/Sprites/Units/ky_si/chan_phai_ky_si.png" id="1_yc0jc"]
+[ext_resource type="Texture2D" uid="uid://4oskcbrmcd5r" path="res://Assets/Sprites/Units/ky_si/chan_trai_ky_si.png" id="2_fdo63"]
+[ext_resource type="Texture2D" uid="uid://ciha0awjk07vs" path="res://Assets/Sprites/Units/ky_si/tay_phai_ky_si.png" id="3_4w8ys"]
+[ext_resource type="Texture2D" uid="uid://5g20uni8dv4g" path="res://Assets/Sprites/Units/ky_si/than_ky_si.png" id="4_s1si5"]
+[ext_resource type="Texture2D" uid="uid://dwe3tnso6n852" path="res://Assets/Sprites/Units/ky_si/tay_trai_ky_si.png" id="5_k5fkf"]
+[ext_resource type="Texture2D" uid="uid://c44pchvje2m7r" path="res://Assets/Sprites/Units/ky_si/vu_khi_ky_si.png" id="6_uhguu"]
+[ext_resource type="Texture2D" uid="uid://blyjdlc8nnai8" path="res://Assets/Sprites/Units/ky_si/dau_ky_si.png" id="7_8a8y6"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ikh62"]
+radius = 96.0
+height = 192.0
+
+[node name="ky_si" type="PathFollow2D" unique_id=288790816]
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1718626294]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=689433191]
+position = Vector2(446, 6)
+shape = SubResource("CapsuleShape2D_ikh62")
+
+[node name="Co_the" type="Node2D" parent="Hitbox" unique_id=1187066021]
+
+[node name="Chan_phai" type="Sprite2D" parent="Hitbox/Co_the" unique_id=1140977434]
+position = Vector2(32, 69)
+texture = ExtResource("1_yc0jc")
+
+[node name="Chan_trai" type="Sprite2D" parent="Hitbox/Co_the" unique_id=815152420]
+position = Vector2(-15, 72)
+texture = ExtResource("2_fdo63")
+
+[node name="Tay_phai" type="Sprite2D" parent="Hitbox/Co_the" unique_id=765555574]
+position = Vector2(38, 15)
+texture = ExtResource("3_4w8ys")
+
+[node name="Than" type="Sprite2D" parent="Hitbox/Co_the" unique_id=1149665915]
+texture = ExtResource("4_s1si5")
+
+[node name="Tay_trai" type="Sprite2D" parent="Hitbox/Co_the" unique_id=1483998484]
+position = Vector2(-31, 14)
+texture = ExtResource("5_k5fkf")
+
+[node name="Vu_khi" type="Sprite2D" parent="Hitbox/Co_the/Tay_trai" unique_id=1607708268]
+show_behind_parent = true
+position = Vector2(89.00001, -4.0000014)
+rotation = -0.23987633
+texture = ExtResource("6_uhguu")
+
+[node name="Dau" type="Sprite2D" parent="Hitbox/Co_the" unique_id=264869785]
+position = Vector2(-5, -82)
+texture = ExtResource("7_8a8y6")

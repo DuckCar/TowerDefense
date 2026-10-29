@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://ocy0apqlv7q0"]
+
+[ext_resource type="Texture2D" uid="uid://dbyk7xwlso1kr" path="res://Assets/Sprites/Units/Sat_den/chan_phai_sat_den.png" id="1_8jlss"]
+[ext_resource type="Texture2D" uid="uid://b5dc611137xrs" path="res://Assets/Sprites/Units/Sat_den/chan_trai_sat_den.png" id="2_atyy2"]
+[ext_resource type="Texture2D" uid="uid://hek8utclirsy" path="res://Assets/Sprites/Units/Sat_den/tay_phai_sat_den.png" id="3_1j3mu"]
+[ext_resource type="Texture2D" uid="uid://no4t746f1sme" path="res://Assets/Sprites/Units/Sat_den/than_sat_den.png" id="4_xbrwt"]
+[ext_resource type="Texture2D" uid="uid://b8hvtlfyr45nc" path="res://Assets/Sprites/Units/Sat_den/tay_trai_sat_den.png" id="5_pahos"]
+[ext_resource type="Texture2D" uid="uid://cdjcc5ep2157d" path="res://Assets/Sprites/Units/Sat_den/vu_khi_sat_den.png" id="6_j3bcc"]
+[ext_resource type="Texture2D" uid="uid://d2rsdegeykiul" path="res://Assets/Sprites/Units/Sat_den/dau_sat_den.png" id="7_wmte8"]
+
+[node name="Sat_den" type="PathFollow2D" unique_id=173719461]
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1900618234]
+
+[node name="Co_the" type="Node2D" parent="Hitbox" unique_id=902036873]
+
+[node name="Chan_phai" type="Sprite2D" parent="Hitbox/Co_the" unique_id=1305540974]
+position = Vector2(230, 184)
+texture = ExtResource("1_8jlss")
+
+[node name="Chan_trai" type="Sprite2D" parent="Hitbox/Co_the" unique_id=335224302]
+position = Vector2(185, 185)
+texture = ExtResource("2_atyy2")
+
+[node name="Tay_phai" type="Sprite2D" parent="Hitbox/Co_the" unique_id=67334093]
+position = Vector2(247.25, 136.25)
+scale = Vector2(1.0102041, 1.005618)
+texture = ExtResource("3_1j3mu")
+
+[node name="Than" type="Sprite2D" parent="Hitbox/Co_the" unique_id=1795494309]
+position = Vector2(206, 141)
+texture = ExtResource("4_xbrwt")
+
+[node name="Tay_trai" type="Sprite2D" parent="Hitbox/Co_the" unique_id=374017721]
+position = Vector2(165, 139)
+texture = ExtResource("5_pahos")
+
+[node name="Vu_khi" type="Sprite2D" parent="Hitbox/Co_the/Tay_trai" unique_id=111774984]
+show_behind_parent = true
+position = Vector2(73, -1)
+texture = ExtResource("6_j3bcc")
+
+[node name="Dau" type="Sprite2D" parent="Hitbox/Co_the" unique_id=817532494]
+position = Vector2(210, 78)
+texture = ExtResource("7_wmte8")
