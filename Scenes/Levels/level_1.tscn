@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cifu1il0kovd7"]
 
 [ext_resource type="Texture2D" uid="uid://cttel2yb4h7jc" path="res://Assets/Sprites/Map/map_level1 (1).png" id="1_d7fwg"]
-[ext_resource type="PackedScene" path="res://Scenes/Entities/goblin_nho.tscn" id="2_gp4xl"]
+[ext_resource type="PackedScene" uid="uid://d3m2odaqj6mcn" path="res://Scenes/Entities/goblin_nho.tscn" id="2_gp4xl"]
 
 [sub_resource type="Curve2D" id="Curve2D_f22da"]
 _data = {
@@ -26,7 +26,7 @@ position = Vector2(45, 191)
 rotation = -0.0176852
 
 [node name="Goblin_nho" parent="Duong_di_quai" instance=ExtResource("2_gp4xl")]
-position = Vector2(45, 191)
+position = Vector2(-23, 189)
 rotation = -0.0176852
 
 [node name="Slot_Xay_Thap" type="Area2D" parent="."]

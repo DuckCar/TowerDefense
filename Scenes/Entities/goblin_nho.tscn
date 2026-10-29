@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://d3m2odaqj6mcn"]
+[gd_scene load_steps=10 format=3 uid="uid://d3m2odaqj6mcn"]
 
 [ext_resource type="Texture2D" uid="uid://cfgrlkr81lb6w" path="res://Assets/Sprites/Units/goblin_nho/than_goblin_nho.png" id="1_4cg2p"]
 [ext_resource type="Script" path="res://Scenes/Entities/goblin_nho.gd" id="1_rc4v8"]
@@ -9,36 +9,55 @@
 [ext_resource type="Texture2D" uid="uid://cddlpobihcnyx" path="res://Assets/Sprites/Units/goblin_nho/chan_phai_goblin_nho.png" id="7_3slrj"]
 [ext_resource type="Texture2D" uid="uid://dtpdf1aodugp4" path="res://Assets/Sprites/Units/goblin_nho/dau_goblin_nho.png" id="8_lkvgn"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_erxht"]
+radius = 42.2727
+height = 114.924
+
 [node name="Goblin_nho" type="PathFollow2D"]
+scale = Vector2(0.283871, 0.226198)
 script = ExtResource("1_rc4v8")
 
-[node name="Co_the" type="Node2D" parent="."]
+[node name="Hitbox" type="Area2D" parent="."]
 
-[node name="Tay_phai" type="Sprite2D" parent="Co_the"]
-position = Vector2(49, 75)
-texture = ExtResource("2_gt2y2")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+rotation = -0.0183171
+shape = SubResource("CapsuleShape2D_erxht")
 
-[node name="Chan_trai" type="Sprite2D" parent="Co_the"]
-position = Vector2(-5, 110)
-texture = ExtResource("3_sxu2k")
+[node name="Co_the" type="Node2D" parent="Hitbox"]
+scale = Vector2(1, 1)
 
-[node name="Than" type="Sprite2D" parent="Co_the"]
-position = Vector2(6, 68)
-texture = ExtResource("1_4cg2p")
-
-[node name="Tay_trai" type="Sprite2D" parent="Co_the"]
-position = Vector2(-23, 71)
-texture = ExtResource("5_aoih1")
-
-[node name="Vu_khi" type="Sprite2D" parent="Co_the/Tay_trai"]
-position = Vector2(42, 7)
-scale = Vector2(0.897619, 0.708333)
-texture = ExtResource("6_3ondf")
-
-[node name="Chan_phai" type="Sprite2D" parent="Co_the"]
-position = Vector2(31, 109)
+[node name="Chan_phai" type="Sprite2D" parent="Hitbox/Co_the"]
+position = Vector2(21.1592, 30.4236)
 texture = ExtResource("7_3slrj")
 
-[node name="Dau" type="Sprite2D" parent="Co_the"]
-position = Vector2(4, 21)
+[node name="Chan_trai" type="Sprite2D" parent="Hitbox/Co_the"]
+position = Vector2(-3.52272, 35.3673)
+rotation = -0.0112795
+texture = ExtResource("3_sxu2k")
+offset = Vector2(-12.3181, -3.94376)
+
+[node name="Than" type="Sprite2D" parent="Hitbox/Co_the"]
+position = Vector2(1.15916, 0.423553)
+texture = ExtResource("1_4cg2p")
+
+[node name="Tay_phai" type="Sprite2D" parent="Hitbox/Co_the/Than"]
+position = Vector2(37.5908, -0.423553)
+scale = Vector2(1, 1)
+texture = ExtResource("2_gt2y2")
+
+[node name="Tay_trai" type="Sprite2D" parent="Hitbox/Co_the/Than"]
+position = Vector2(-32.8637, -0.423553)
+scale = Vector2(1, 1)
+texture = ExtResource("5_aoih1")
+
+[node name="Vu_khi" type="Sprite2D" parent="Hitbox/Co_the/Than/Tay_trai"]
+show_behind_parent = true
+position = Vector2(54.2188, 10.1875)
+scale = Vector2(1.08155, 0.732639)
+texture = ExtResource("6_3ondf")
+
+[node name="Dau" type="Sprite2D" parent="Hitbox/Co_the/Than"]
+position = Vector2(-1.15916, -44.6327)
+scale = Vector2(0.938775, 1)
 texture = ExtResource("8_lkvgn")
+offset = Vector2(-3.0261, -0.367308)

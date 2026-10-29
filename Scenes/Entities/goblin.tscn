@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://dthr6j1iu18tx"]
+
+[ext_resource type="Texture2D" uid="uid://d3ngqpg61c4vm" path="res://Assets/Sprites/Units/goblin/chan_phai_goblin.png" id="1_bj248"]
+[ext_resource type="Texture2D" uid="uid://b1rgnvpxi7p81" path="res://Assets/Sprites/Units/goblin/chan_trai_goblin.png" id="2_gnllk"]
+[ext_resource type="Texture2D" uid="uid://qjqd7lbf5cdj" path="res://Assets/Sprites/Units/goblin/tay_phai_goblin.png" id="3_xud48"]
+[ext_resource type="Texture2D" uid="uid://tgsfg1ebjjfr" path="res://Assets/Sprites/Units/goblin/than_goblin.png" id="4_mun0g"]
+[ext_resource type="Texture2D" uid="uid://c8apmv1q1825" path="res://Assets/Sprites/Units/goblin/tay_trai_goblin.png" id="5_22gmr"]
+[ext_resource type="Texture2D" uid="uid://s7jqunusg1k8" path="res://Assets/Sprites/Units/goblin/vu_khi_goblin.png" id="6_ff3jm"]
+[ext_resource type="Texture2D" uid="uid://rqjsoh2iov3e" path="res://Assets/Sprites/Units/goblin/dau_goblin.png" id="7_uxsxv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rm8nd"]
+radius = 27.0
+height = 58.0
+
+[node name="goblin" type="PathFollow2D"]
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CapsuleShape2D_rm8nd")
+
+[node name="Co_the" type="Node2D" parent="Hitbox"]
+
+[node name="Chan_phai" type="Sprite2D" parent="Hitbox/Co_the"]
+position = Vector2(11, 29)
+scale = Vector2(0.330645, 0.411017)
+texture = ExtResource("1_bj248")
+
+[node name="Chan_trai" type="Sprite2D" parent="Hitbox/Co_the"]
+position = Vector2(-8, 29)
+scale = Vector2(0.369048, 0.436441)
+texture = ExtResource("2_gnllk")
+
+[node name="Tay_phai" type="Sprite2D" parent="Hitbox/Co_the"]
+position = Vector2(24, 3)
+scale = Vector2(0.34955, 0.366317)
+texture = ExtResource("3_xud48")
+
+[node name="Than" type="Sprite2D" parent="Hitbox/Co_the"]
+position = Vector2(1.5, 2.38419e-07)
+scale = Vector2(0.341667, 0.387097)
+texture = ExtResource("4_mun0g")
+
+[node name="Tay_trai" type="Sprite2D" parent="Hitbox/Co_the/Than"]
+position = Vector2(-71.7073, 7.75)
+scale = Vector2(1.38158, 0.984127)
+texture = ExtResource("5_22gmr")
+
+[node name="Vu-khi" type="Sprite2D" parent="Hitbox/Co_the/Than/Tay_trai"]
+show_behind_parent = true
+position = Vector2(67.7909, 13.125)
+scale = Vector2(0.674765, 1.15406)
+texture = ExtResource("6_ff3jm")
+
+[node name="Dau" type="Sprite2D" parent="Hitbox/Co_the/Than"]
+position = Vector2(-4.39024, -90.4167)
+scale = Vector2(1.20616, 1.02615)
+texture = ExtResource("7_uxsxv")
