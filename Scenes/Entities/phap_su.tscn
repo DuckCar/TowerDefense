@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://vyytihq8r2mv"]
+[gd_scene format=3 uid="uid://vyytihq8r2mv"]
 
 [ext_resource type="Texture2D" uid="uid://cpnk77ujc4ah6" path="res://Assets/Sprites/Units/phap_su/chan_phai_phap_su.png" id="1_1b4qj"]
 [ext_resource type="Texture2D" uid="uid://c3gal585jjg4i" path="res://Assets/Sprites/Units/phap_su/chan_trai_phap_su.png" id="2_7go3g"]

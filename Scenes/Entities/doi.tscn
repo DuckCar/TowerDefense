@@ -8,6 +8,91 @@
 radius = 52.0
 height = 108.0
 
+[sub_resource type="Animation" id="Animation_kuw25"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hitbox/Co_the/Tay_trai:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5235988]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hitbox/Co_the/Tay_phai:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.5235988]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hitbox/Co_the:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -10)]
+}
+
+[sub_resource type="Animation" id="Animation_vhfdo"]
+resource_name = "walk"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hitbox/Co_the/Tay_trai:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.5235988, -0.5235988]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hitbox/Co_the/Tay_phai:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.5235988, 0.5235988]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hitbox/Co_the:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.25, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -10), Vector2(0, 10)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qywqb"]
+_data = {
+&"RESET": SubResource("Animation_kuw25"),
+&"walk": SubResource("Animation_vhfdo")
+}
+
 [node name="doi" type="PathFollow2D" unique_id=1352161785]
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1444153626]
@@ -17,14 +102,23 @@ position = Vector2(-1, -1)
 shape = SubResource("CapsuleShape2D_ikh62")
 
 [node name="Co_the" type="Node2D" parent="Hitbox" unique_id=933301686]
+position = Vector2(0, -10)
 
 [node name="Tay_phai" type="Sprite2D" parent="Hitbox/Co_the" unique_id=163502928]
-position = Vector2(66, -52)
+position = Vector2(31, -30)
+rotation = -0.5235988
 texture = ExtResource("1_kuw25")
+offset = Vector2(35, -22)
 
 [node name="Than" type="Sprite2D" parent="Hitbox/Co_the" unique_id=1269305736]
 texture = ExtResource("2_vhfdo")
 
 [node name="Tay_trai" type="Sprite2D" parent="Hitbox/Co_the" unique_id=1593763015]
-position = Vector2(-79, -29)
+position = Vector2(-44, -11)
+rotation = 0.5235988
 texture = ExtResource("3_qywqb")
+offset = Vector2(-35, -18)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=757764274]
+libraries/ = SubResource("AnimationLibrary_qywqb")
+autoplay = &"walk"

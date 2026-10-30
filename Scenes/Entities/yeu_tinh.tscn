@@ -12,6 +12,139 @@
 radius = 48.0
 height = 164.0
 
+[sub_resource type="Animation" id="Animation_vn2l1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hitbox/Co_the/Chan_trai:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5235988]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hitbox/Co_the/Chan_phai:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.5235988]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hitbox/Co_the/Tay_trai:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.5235988]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Hitbox/Co_the/Tay_phai:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5235988]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Hitbox/Co_the:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -10)]
+}
+
+[sub_resource type="Animation" id="Animation_p2grf"]
+resource_name = "walk"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hitbox/Co_the/Chan_trai:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.5235988, -0.5235988]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hitbox/Co_the/Chan_phai:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.5235988, 0.5235988]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hitbox/Co_the/Tay_trai:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.5235988, 0.5235988]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Hitbox/Co_the/Tay_phai:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.5235988, -0.5235988]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Hitbox/Co_the:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.25, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -10), Vector2(0, 10)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ig3cd"]
+_data = {
+&"RESET": SubResource("Animation_vn2l1"),
+&"walk": SubResource("Animation_p2grf")
+}
+
 [node name="yeu_tinh" type="PathFollow2D" unique_id=1804171484]
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=974969615]
@@ -21,31 +154,44 @@ position = Vector2(2, -16)
 shape = SubResource("CapsuleShape2D_n4jmy")
 
 [node name="Co_the" type="Node2D" parent="Hitbox" unique_id=190413944]
+position = Vector2(0, -10)
 
 [node name="Chan_phai" type="Sprite2D" parent="Hitbox/Co_the" unique_id=1489876515]
-position = Vector2(19, 49)
+position = Vector2(15.722532, 35.3752)
+rotation = -0.5235988
 texture = ExtResource("1_vn2l1")
+offset = Vector2(-3.9740314, 13.43816)
 
 [node name="Chan_trai" type="Sprite2D" parent="Hitbox/Co_the" unique_id=1783385101]
-position = Vector2(-18, 49)
+position = Vector2(-14.876463, 35.9216)
+rotation = 0.5235988
 texture = ExtResource("2_p2grf")
+offset = Vector2(3.8341389, 12.887997)
 
 [node name="Tay_phai" type="Sprite2D" parent="Hitbox/Co_the" unique_id=78154273]
-position = Vector2(31, -4)
+position = Vector2(30, -30)
+rotation = 0.5235988
 texture = ExtResource("3_ig3cd")
+offset = Vector2(1, 26)
 
 [node name="Than" type="Sprite2D" parent="Hitbox/Co_the" unique_id=368385312]
 texture = ExtResource("4_q0ipa")
 
-[node name="Tay_trai" type="Sprite2D" parent="Hitbox/Co_the/Than" unique_id=20263314]
-position = Vector2(-30, -3)
+[node name="Tay_trai" type="Sprite2D" parent="Hitbox/Co_the" unique_id=20263314]
+position = Vector2(-19, -31)
+rotation = -0.5235988
 texture = ExtResource("5_rlips")
+offset = Vector2(-11, 28)
 
-[node name="Vu_khi" type="Sprite2D" parent="Hitbox/Co_the/Than/Tay_trai" unique_id=1326052165]
+[node name="Vu_khi" type="Sprite2D" parent="Hitbox/Co_the/Tay_trai" unique_id=1326052165]
 show_behind_parent = true
-position = Vector2(55, 6)
+position = Vector2(43.39994, 41.795383)
 texture = ExtResource("6_pgccd")
 
 [node name="Dau" type="Sprite2D" parent="Hitbox/Co_the" unique_id=793267922]
 position = Vector2(-6, -76)
 texture = ExtResource("7_8w6fi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1512966092]
+libraries/ = SubResource("AnimationLibrary_ig3cd")
+autoplay = &"walk"
