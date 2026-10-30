@@ -24,9 +24,10 @@ curve = SubResource("Curve2D_f22da")
 [node name="PathFollow2D" type="PathFollow2D" parent="Duong_di_quai"]
 position = Vector2(45, 191)
 rotation = -0.0176852
+rotates = false
 
 [node name="Goblin_nho" parent="Duong_di_quai" instance=ExtResource("2_gp4xl")]
-position = Vector2(-23, 189)
+position = Vector2(45, 191)
 rotation = -0.0176852
 
 [node name="Slot_Xay_Thap" type="Area2D" parent="."]

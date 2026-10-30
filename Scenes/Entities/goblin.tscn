@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dthr6j1iu18tx"]
+[gd_scene load_steps=12 format=3 uid="uid://dthr6j1iu18tx"]
 
 [ext_resource type="Texture2D" uid="uid://d3ngqpg61c4vm" path="res://Assets/Sprites/Units/goblin/chan_phai_goblin.png" id="1_bj248"]
 [ext_resource type="Texture2D" uid="uid://b1rgnvpxi7p81" path="res://Assets/Sprites/Units/goblin/chan_trai_goblin.png" id="2_gnllk"]
@@ -12,6 +12,139 @@
 radius = 27.0
 height = 58.0
 
+[sub_resource type="Animation" id="Animation_183cp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hitbox/Co_the/Chan_trai:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.523599]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hitbox/Co_the/Chan_phai:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.523599]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hitbox/Co_the/Than/Tay_trai:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.523599]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Hitbox/Co_the/Tay_phai:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.523599]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Hitbox/Co_the:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -10)]
+}
+
+[sub_resource type="Animation" id="Animation_tfntd"]
+resource_name = "walk"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hitbox/Co_the/Chan_trai:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.523599, -0.523599]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hitbox/Co_the/Chan_phai:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.523599, 0.523599]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hitbox/Co_the/Than/Tay_trai:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.523599, 0.523599]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Hitbox/Co_the/Tay_phai:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.523599, -0.523599]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Hitbox/Co_the:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.2, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -10), Vector2(0, 10)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q4063"]
+_data = {
+"RESET": SubResource("Animation_183cp"),
+"walk": SubResource("Animation_tfntd")
+}
+
 [node name="goblin" type="PathFollow2D"]
 
 [node name="Hitbox" type="Area2D" parent="."]
@@ -20,21 +153,28 @@ height = 58.0
 shape = SubResource("CapsuleShape2D_rm8nd")
 
 [node name="Co_the" type="Node2D" parent="Hitbox"]
+position = Vector2(0, -10)
 
 [node name="Chan_phai" type="Sprite2D" parent="Hitbox/Co_the"]
-position = Vector2(11, 29)
+position = Vector2(11.0194, 20.2939)
+rotation = -0.523599
 scale = Vector2(0.330645, 0.411017)
 texture = ExtResource("1_bj248")
+offset = Vector2(-1.86229, 13.802)
 
 [node name="Chan_trai" type="Sprite2D" parent="Hitbox/Co_the"]
-position = Vector2(-8, 29)
+position = Vector2(-1.99529, 21.6287)
+rotation = 0.523599
 scale = Vector2(0.369048, 0.436441)
 texture = ExtResource("2_gnllk")
+offset = Vector2(-12.2487, 11.1595)
 
 [node name="Tay_phai" type="Sprite2D" parent="Hitbox/Co_the"]
-position = Vector2(24, 3)
+position = Vector2(19.0284, -9.40632)
+rotation = 0.523599
 scale = Vector2(0.34955, 0.366317)
 texture = ExtResource("3_xud48")
+offset = Vector2(17.8548, 32.2635)
 
 [node name="Than" type="Sprite2D" parent="Hitbox/Co_the"]
 position = Vector2(1.5, 2.38419e-07)
@@ -42,17 +182,25 @@ scale = Vector2(0.341667, 0.387097)
 texture = ExtResource("4_mun0g")
 
 [node name="Tay_trai" type="Sprite2D" parent="Hitbox/Co_the/Than"]
-position = Vector2(-71.7073, 7.75)
+position = Vector2(-51.2519, -24.2996)
+rotation = -0.523599
 scale = Vector2(1.38158, 0.984127)
 texture = ExtResource("5_22gmr")
+offset = Vector2(-17.1495, 30.2155)
 
 [node name="Vu-khi" type="Sprite2D" parent="Hitbox/Co_the/Than/Tay_trai"]
 show_behind_parent = true
-position = Vector2(67.7909, 13.125)
+position = Vector2(46.5216, 45.933)
 scale = Vector2(0.674765, 1.15406)
 texture = ExtResource("6_ff3jm")
 
 [node name="Dau" type="Sprite2D" parent="Hitbox/Co_the/Than"]
-position = Vector2(-4.39024, -90.4167)
-scale = Vector2(1.20616, 1.02615)
+position = Vector2(-7.31707, -80.0833)
+scale = Vector2(1.29174, 1.0258)
 texture = ExtResource("7_uxsxv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "walk"
+libraries = {
+"": SubResource("AnimationLibrary_q4063")
+}
