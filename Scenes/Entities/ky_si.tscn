@@ -9,44 +9,191 @@
 [ext_resource type="Texture2D" uid="uid://blyjdlc8nnai8" path="res://Assets/Sprites/Units/ky_si/dau_ky_si.png" id="7_8a8y6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ikh62"]
-radius = 96.0
-height = 192.0
+radius = 51.0
+height = 202.0
+
+[sub_resource type="Animation" id="Animation_yc0jc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hitbox/Co_the/Chan_trai:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5235988]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hitbox/Co_the/Chan_phai:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.5235988]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hitbox/Co_the/Tay_trai:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.5235988]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Hitbox/Co_the/Tay_phai:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5235988]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Hitbox/Co_the:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -10)]
+}
+
+[sub_resource type="Animation" id="Animation_fdo63"]
+resource_name = "walk"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hitbox/Co_the/Chan_trai:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.5235988, -0.5235988]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hitbox/Co_the/Chan_phai:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.5235988, 0.5235988]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hitbox/Co_the/Tay_trai:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.5235988, 0.5235988]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Hitbox/Co_the/Tay_phai:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.5235988, -0.5235988]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Hitbox/Co_the:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.25, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -10), Vector2(0, 10)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4w8ys"]
+_data = {
+&"RESET": SubResource("Animation_yc0jc"),
+&"walk": SubResource("Animation_fdo63")
+}
 
 [node name="ky_si" type="PathFollow2D" unique_id=288790816]
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1718626294]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=689433191]
-position = Vector2(446, 6)
+position = Vector2(1, -16)
 shape = SubResource("CapsuleShape2D_ikh62")
 
 [node name="Co_the" type="Node2D" parent="Hitbox" unique_id=1187066021]
+position = Vector2(0, -10)
 
 [node name="Chan_phai" type="Sprite2D" parent="Hitbox/Co_the" unique_id=1140977434]
-position = Vector2(32, 69)
+position = Vector2(31, 44)
+rotation = -0.5235988
 texture = ExtResource("1_yc0jc")
+offset = Vector2(1, 25)
 
 [node name="Chan_trai" type="Sprite2D" parent="Hitbox/Co_the" unique_id=815152420]
-position = Vector2(-15, 72)
+position = Vector2(-2.9309378, 49.047073)
+rotation = 0.5235988
 texture = ExtResource("2_fdo63")
+offset = Vector2(1.0243492, 25.91235)
 
 [node name="Tay_phai" type="Sprite2D" parent="Hitbox/Co_the" unique_id=765555574]
-position = Vector2(38, 15)
+position = Vector2(35, -22)
+rotation = 0.5235988
 texture = ExtResource("3_4w8ys")
+offset = Vector2(3, 37)
 
 [node name="Than" type="Sprite2D" parent="Hitbox/Co_the" unique_id=1149665915]
+rotation = 0.011262058
 texture = ExtResource("4_s1si5")
 
 [node name="Tay_trai" type="Sprite2D" parent="Hitbox/Co_the" unique_id=1483998484]
-position = Vector2(-31, 14)
+position = Vector2(-28, -21)
+rotation = -0.5235988
 texture = ExtResource("5_k5fkf")
+offset = Vector2(-3, 35)
 
 [node name="Vu_khi" type="Sprite2D" parent="Hitbox/Co_the/Tay_trai" unique_id=1607708268]
 show_behind_parent = true
-position = Vector2(89.00001, -4.0000014)
-rotation = -0.23987633
+position = Vector2(85.77241, 41.437828)
+rotation = -0.029712662
 texture = ExtResource("6_uhguu")
 
 [node name="Dau" type="Sprite2D" parent="Hitbox/Co_the" unique_id=264869785]
 position = Vector2(-5, -82)
 texture = ExtResource("7_8a8y6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1008001554]
+libraries/ = SubResource("AnimationLibrary_4w8ys")
+autoplay = &"walk"

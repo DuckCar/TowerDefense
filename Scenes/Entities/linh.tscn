@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ci8inrwvklpsj"]
+[gd_scene format=3 uid="uid://ci8inrwvklpsj"]
 
 [ext_resource type="Texture2D" uid="uid://bqprxio1mbrsr" path="res://Assets/Sprites/Units/linh/chan_phai_linh.png" id="1_sykin"]
 [ext_resource type="Texture2D" uid="uid://b7tlvofop863s" path="res://Assets/Sprites/Units/linh/chan_trai_linh.png" id="2_03iba"]

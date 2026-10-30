@@ -24,7 +24,7 @@ curve = SubResource("Curve2D_w2ac1")
 
 [node name="ke_cuop" parent="Duong_Di_Quai" unique_id=1481286277 instance=ExtResource("2_oylv5")]
 position = Vector2(258, 22)
-rotation = 1.5707964
+rotation = -0.03500869
 
 [node name="Slot_Xay_Thap" type="Area2D" parent="." unique_id=712102538]
 

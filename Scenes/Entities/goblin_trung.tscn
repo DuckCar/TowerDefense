@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dmu5v8e5ugf44"]
+[gd_scene format=3 uid="uid://dmu5v8e5ugf44"]
 
 [ext_resource type="Texture2D" uid="uid://bsicr2nidsi5k" path="res://Assets/Sprites/Units/goblin_trung/chan_phai_goblin_trung.png" id="1_sw1on"]
 [ext_resource type="Texture2D" uid="uid://dp5efno1ccmac" path="res://Assets/Sprites/Units/goblin_trung/chan_trai_goblin_trung.png" id="2_ex7b7"]

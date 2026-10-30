@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dthr6j1iu18tx"]
+[gd_scene format=3 uid="uid://dthr6j1iu18tx"]
 
 [ext_resource type="Texture2D" uid="uid://d3ngqpg61c4vm" path="res://Assets/Sprites/Units/goblin/chan_phai_goblin.png" id="1_bj248"]
 [ext_resource type="Texture2D" uid="uid://b1rgnvpxi7p81" path="res://Assets/Sprites/Units/goblin/chan_trai_goblin.png" id="2_gnllk"]
